@@ -1,5 +1,3 @@
-
-
 $(".hamburger, #navbar a").on("click", () => {
 	let currentVisibility = $("#navbar").css("visibility");
 	let newVisibility = currentVisibility === "hidden" ? "visible" : "hidden";
@@ -9,4 +7,4 @@ $(".hamburger, #navbar a").on("click", () => {
 	} else {
 		$("#navbar").removeClass("visibilty");
 	}
-})
+});
