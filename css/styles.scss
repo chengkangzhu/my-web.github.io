@@ -775,3 +775,22 @@ header {
 		}
 	}
 }
+
+.thankyou {
+	background-color: #6364651a;
+	padding: 40px;
+	max-width: 720px;
+	margin: 80px auto;
+
+	h2{
+		margin-bottom: 10px;
+	}
+
+	p{
+		font-size: nth($p-fs,1)
+	}
+
+	a{
+		color:RGB(29, 104, 167);
+	}
+}

@@ -737,4 +737,20 @@ header nav ul a i {
   100% {
     background-position-x: 1000px;
   }
+}
+
+.thankyou {
+  background-color: rgba(99, 100, 101, 0.1019607843);
+  padding: 40px;
+  max-width: 720px;
+  margin: 80px auto;
+}
+.thankyou h2 {
+  margin-bottom: 10px;
+}
+.thankyou p {
+  font-size: 22px;
+}
+.thankyou a {
+  color: RGB(29, 104, 167);
 }/*# sourceMappingURL=styles.css.map */
