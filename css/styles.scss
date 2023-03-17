@@ -616,16 +616,14 @@ header {
 			margin-bottom: 30px;
 			font-size: 20px;
 			font-weight: 300;
+				width: 50%;
 
 			&::placeholder {
 				color: #737373;
 			}
 
-			&:first-of-type {
+			&[name="name"] {
 				width: 75%;
-			}
-			&:first-of-type + input {
-				width: 50%;
 			}
 
 			@media (max-width: 550px) {

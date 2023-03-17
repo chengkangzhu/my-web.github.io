@@ -591,6 +591,7 @@ header nav ul a i {
   margin-bottom: 30px;
   font-size: 20px;
   font-weight: 300;
+  width: 50%;
 }
 #contact-section form input::-moz-placeholder {
   color: #737373;
@@ -598,11 +599,8 @@ header nav ul a i {
 #contact-section form input::placeholder {
   color: #737373;
 }
-#contact-section form input:first-of-type {
+#contact-section form input[name=name] {
   width: 75%;
-}
-#contact-section form input:first-of-type + input {
-  width: 50%;
 }
 @media (max-width: 550px) {
   #contact-section form input {
