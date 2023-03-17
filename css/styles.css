@@ -214,6 +214,10 @@ header nav ul a i {
     flex-direction: column;
     align-items: center;
   }
+  #hero-section .intro h2 {
+    text-align: center;
+    font-size: 40px;
+  }
   #hero-section .intro p {
     text-align: center;
   }
@@ -342,6 +346,12 @@ header nav ul a i {
 #project-section .carousel-item .project-content .project-description p {
   font-size: 20px;
 }
+@media (max-width: 800px) {
+  #project-section .carousel-item .project-content .project-description p {
+    padding: 0 10px;
+    text-align: center;
+  }
+}
 @media (max-width: 1456px) {
   #project-section .carousel-item .project-content .project-description {
     max-width: 90%;
@@ -359,17 +369,18 @@ header nav ul a i {
   opacity: 1;
   box-shadow: 0px 0px 10px -2px black;
 }
-@media (max-width: 1456px) {
+@media (max-width: 800px) {
   #project-section .carousel-control-prev,
   #project-section .carousel-control-next {
+    padding-top: 500px;
     background-color: transparent;
     box-shadow: none;
   }
 }
-@media (max-width: 800px) {
+@media (max-width: 600px) {
   #project-section .carousel-control-prev,
   #project-section .carousel-control-next {
-    display: none;
+    padding-top: 400px;
   }
 }
 #project-section .carousel-control-prev:hover,
