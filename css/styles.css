@@ -91,11 +91,14 @@ header nav ul a i {
   header nav .hamburger {
     display: inline;
     font-size: 28px;
-    line-height: 70px;
+    line-height: 50px;
+  }
+  header nav h1 {
+    line-height: 50px;
   }
   header nav ul {
     position: absolute;
-    top: 70px;
+    top: 60px;
     right: 0px;
     height: 300px;
     width: 180px;
@@ -277,6 +280,8 @@ header nav ul a i {
 }
 @media (max-width: 900px) {
   #about-section {
+    border: 1px solid black;
+    border-bottom: none;
     border-bottom-left-radius: 0;
     border-bottom-right-radius: 0;
     box-shadow: 0px 5px 4px rgba(0, 0, 0, 0.25);
@@ -328,6 +333,9 @@ header nav ul a i {
 }
 #project-section .carousel-item .project-content img {
   height: calc(100px + 20vw);
+  transform: translateX(0%);
+  transition: all 2s ease-in-out;
+  opacity: 1;
 }
 @media (max-width: 1456px) {
   #project-section .carousel-item .project-content img {
@@ -342,6 +350,9 @@ header nav ul a i {
 }
 #project-section .carousel-item .project-content .project-description {
   max-width: 400px;
+  transition: all 2s ease-in-out;
+  opacity: 1;
+  transform: translateX(0%);
 }
 #project-section .carousel-item .project-content .project-description p {
   font-size: 20px;
@@ -356,6 +367,14 @@ header nav ul a i {
   #project-section .carousel-item .project-content .project-description {
     max-width: 90%;
   }
+}
+#project-section .carousel-item .project-content .project-image-animate {
+  transform: translateX(-100%);
+  opacity: 0;
+}
+#project-section .carousel-item .project-content .project-description-animate {
+  transform: translateX(100%);
+  opacity: 0;
 }
 @media (max-width: 1456px) {
   #project-section .carousel-item .project-content {
@@ -424,9 +443,16 @@ header nav ul a i {
   transition: 0.6s linear;
   margin-right: 20px;
   margin-left: 20px;
+  opacity: 0;
+  transform: translateY(100px);
   /* Define animation keyframes for the first .drop element */
   /* Define animation keyframes for the second .drop element */
   /* Define animation keyframes for the third .drop element */
+}
+#service-section .service-drops .drop.animate {
+  opacity: 1;
+  transform: translateY(0);
+  transition: opacity 1.5s, transform 1.5s;
 }
 @media (max-width: 470px) {
   #service-section .service-drops .drop {
@@ -533,11 +559,15 @@ header nav ul a i {
   position: relative;
   width: 150px;
   height: 150px;
+  background-color: #dfdfdf;
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
   gap: 10px;
+  box-shadow: 4px 4px 6px 4px rgba(0, 0, 0, 0.1);
+  border: 3px solid rgb(255, 255, 255);
+  border-radius: 5px;
 }
 #skill-section .skill-container .skill-box img {
   height: 45%;
