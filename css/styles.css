@@ -330,12 +330,18 @@ header nav ul a i {
 #project-section .carousel-item .project-content a {
   display: flex;
   justify-content: center;
+  transform: translateX(0%);
+  transition: transform 2s ease-in-out;
+  opacity: 1;
+}
+#project-section .carousel-item .project-content a::after {
+  content: "Click to visit my website";
+  color: rgb(69, 69, 69);
+  position: absolute;
+  bottom: -30px;
 }
 #project-section .carousel-item .project-content img {
   height: calc(100px + 20vw);
-  transform: translateX(0%);
-  transition: all 2s ease-in-out;
-  opacity: 1;
 }
 @media (max-width: 1456px) {
   #project-section .carousel-item .project-content img {
@@ -350,7 +356,7 @@ header nav ul a i {
 }
 #project-section .carousel-item .project-content .project-description {
   max-width: 400px;
-  transition: all 2s ease-in-out;
+  transition: transform 2s ease-in-out;
   opacity: 1;
   transform: translateX(0%);
 }
@@ -378,7 +384,7 @@ header nav ul a i {
 }
 @media (max-width: 1456px) {
   #project-section .carousel-item .project-content {
-    gap: 40px;
+    gap: 60px;
   }
 }
 #project-section .carousel-control-prev,

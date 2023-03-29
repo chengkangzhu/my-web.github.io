@@ -319,17 +319,27 @@ header {
 			display: flex;
 			flex-wrap: wrap;
 			justify-content: space-evenly;
+			
 
 			a {
 				display: flex;
 				justify-content: center;
+				transform: translateX(0%);
+				transition: transform 2s ease-in-out;
+				opacity: 1;
+
+				
+				&::after{
+					content:"Click to visit my website";
+					color: rgb(69, 69, 69);
+					position:absolute;
+					bottom:  -30px;
+				}
 			}
 
 			img {
 				height: calc(100px + 20vw);
-				transform: translateX(0%);
-				transition: all 2s ease-in-out;
-				opacity: 1;
+				
 
 				@media (max-width: 1456px) {
 					height: auto;
@@ -343,7 +353,7 @@ header {
 
 			.project-description {
 				max-width: 400px;
-				transition: all 2s ease-in-out;
+				transition: transform 2s ease-in-out;
 				opacity: 1;
 				transform: translateX(00%);
 
@@ -372,7 +382,7 @@ header {
 			}
 
 			@media (max-width: 1456px) {
-				gap: 40px;
+				gap: 60px;
 			}
 		}
 	}
