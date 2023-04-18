@@ -56,4 +56,23 @@ window.addEventListener("scroll", () => {
 	}
 });
 
+const skillBoxContainer = document.querySelector(".skill-container");
 
+const options = {
+	root: null,
+	rootMargin: "0px",
+	threshold: 0.3,
+};
+
+const observer = new IntersectionObserver((entries) => {
+	entries.forEach((entry) => {
+		if (entry.isIntersecting) {
+			entry.target.querySelectorAll(".skill-box").forEach((skillBox) => {
+				skillBox.classList.add("animation-active");
+			});
+		}
+	});
+}, options);
+
+observer.observe(skillBoxContainer);
+s;
