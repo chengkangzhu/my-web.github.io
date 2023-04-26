@@ -23,7 +23,6 @@ header {
 		width: 100%;
 		overflow-x: hidden;
 
-		
 		a {
 			text-decoration: none;
 			padding-top: 10px;
@@ -263,8 +262,12 @@ header {
 		padding: 6px 30px 2px;
 		justify-content: space-around;
 		margin: auto;
-		box-shadow: 2px 3px #202020;
 		margin-top: 40px;
+
+		&:hover {
+			box-shadow: 2px 3px #5f5f5f;
+			transform: translate(-2px, -3px);
+		}
 
 		i {
 			margin-left: 10px;
@@ -326,7 +329,7 @@ header {
 				display: flex;
 				justify-content: center;
 				transform: translateX(0%);
-				transition: transform 2s ease-in-out;
+				transition: transform 2s ease-in-out, opacity 2s;
 				opacity: 1;
 
 				&::after {
@@ -352,9 +355,23 @@ header {
 
 			.project-description {
 				max-width: 400px;
-				transition: transform 2s ease-in-out;
+				transition: transform 2s ease-in-out, opacity 2s;
 				opacity: 1;
 				transform: translateX(00%);
+
+				a {
+					display: inline;
+					color: rgb(42, 117, 230);
+					text-decoration: none;
+
+					&::after {
+						display: none;
+					}
+
+					&:hover {
+						text-decoration: underline;
+					}
+				}
 
 				p {
 					font-size: nth($p-fs, 2);
@@ -371,12 +388,12 @@ header {
 			}
 
 			.project-image-animate {
-				transform: translateX(-100%);
+				transform: translateX(-30%);
 				opacity: 0;
 			}
 
 			.project-description-animate {
-				transform: translateX(100%);
+				transform: translateX(40%);
 				opacity: 0;
 			}
 
@@ -602,7 +619,7 @@ header {
 
 			opacity: 0;
 			transform: translateX(-250px);
-			transition: opacity .4s, transform .7s;
+			transition: opacity 0.4s, transform 0.7s;
 
 			&.animation-active {
 				opacity: 1;
@@ -683,11 +700,11 @@ header {
 			}
 
 			&:nth-child(11) {
-				transition-delay:2s;
+				transition-delay: 2s;
 				z-index: 2;
 			}
 			&:nth-child(12) {
-				transition-delay:2.2s;
+				transition-delay: 2.2s;
 				z-index: 1;
 			}
 		}

@@ -269,8 +269,11 @@ header nav ul a i {
   padding: 6px 30px 2px;
   justify-content: space-around;
   margin: auto;
-  box-shadow: 2px 3px #202020;
   margin-top: 40px;
+}
+#about-section a:hover {
+  box-shadow: 2px 3px #5f5f5f;
+  transform: translate(-2px, -3px);
 }
 #about-section a i {
   margin-left: 10px;
@@ -332,7 +335,7 @@ header nav ul a i {
   display: flex;
   justify-content: center;
   transform: translateX(0%);
-  transition: transform 2s ease-in-out;
+  transition: transform 2s ease-in-out, opacity 2s;
   opacity: 1;
 }
 #project-section .carousel-item .project-content a::after {
@@ -357,9 +360,20 @@ header nav ul a i {
 }
 #project-section .carousel-item .project-content .project-description {
   max-width: 400px;
-  transition: transform 2s ease-in-out;
+  transition: transform 2s ease-in-out, opacity 2s;
   opacity: 1;
   transform: translateX(0%);
+}
+#project-section .carousel-item .project-content .project-description a {
+  display: inline;
+  color: rgb(42, 117, 230);
+  text-decoration: none;
+}
+#project-section .carousel-item .project-content .project-description a::after {
+  display: none;
+}
+#project-section .carousel-item .project-content .project-description a:hover {
+  text-decoration: underline;
 }
 #project-section .carousel-item .project-content .project-description p {
   font-size: 20px;
@@ -376,11 +390,11 @@ header nav ul a i {
   }
 }
 #project-section .carousel-item .project-content .project-image-animate {
-  transform: translateX(-100%);
+  transform: translateX(-30%);
   opacity: 0;
 }
 #project-section .carousel-item .project-content .project-description-animate {
-  transform: translateX(100%);
+  transform: translateX(40%);
   opacity: 0;
 }
 @media (max-width: 1456px) {
