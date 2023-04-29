@@ -66,9 +66,14 @@ const options = {
 
 const observer = new IntersectionObserver((entries) => {
 	entries.forEach((entry) => {
+		let delay = 0;
+
 		if (entry.isIntersecting) {
 			entry.target.querySelectorAll(".skill-box").forEach((skillBox) => {
-				skillBox.classList.add("animation-active");
+				setTimeout(() => {
+					skillBox.classList.add("animation-active");
+				}, delay);
+				delay += 200; // increase the delay for each element by 200ms
 			});
 		}
 	});
