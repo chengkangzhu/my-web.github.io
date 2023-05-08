@@ -102,14 +102,14 @@ header {
 	.intro {
 		h2 {
 			margin-top: 30%;
-			margin-bottom: 20px;
+			margin-bottom: 8px;
 		}
 
 		p {
 			font-size: nth($p-fs, 1);
-			font-weight: 200;
-			margin-bottom: 75px;
-			max-width: 520px;
+			font-weight: 300;
+			margin-bottom: 55px;
+			max-width: 460px;
 		}
 
 		a {
@@ -263,6 +263,7 @@ header {
 		justify-content: space-around;
 		margin: auto;
 		margin-top: 40px;
+		transition: box-shadow 0.1s, transform 0.1s;
 
 		&:hover {
 			box-shadow: 2px 3px #5f5f5f;
@@ -314,6 +315,18 @@ header {
 		h3 {
 			text-align: center;
 			margin-bottom: 100px;
+
+			i {
+				font-size: 24px;
+				margin-left: 5px;
+				transition: 0.5s;
+
+				@media (min-width: 480px) {
+					&:hover {
+						transform: translateY(-4px);
+					}
+				}
+			}
 
 			@media (max-width: 1100px) {
 				margin-bottom: 60px;

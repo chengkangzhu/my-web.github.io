@@ -129,13 +129,13 @@ header nav ul a i {
 }
 #hero-section .intro h2 {
   margin-top: 30%;
-  margin-bottom: 20px;
+  margin-bottom: 8px;
 }
 #hero-section .intro p {
   font-size: 22px;
-  font-weight: 200;
-  margin-bottom: 75px;
-  max-width: 520px;
+  font-weight: 300;
+  margin-bottom: 55px;
+  max-width: 460px;
 }
 #hero-section .intro a {
   background-color: #3a3a3a;
@@ -270,6 +270,7 @@ header nav ul a i {
   justify-content: space-around;
   margin: auto;
   margin-top: 40px;
+  transition: box-shadow 0.1s, transform 0.1s;
 }
 #about-section a:hover {
   box-shadow: 2px 3px #5f5f5f;
@@ -320,6 +321,16 @@ header nav ul a i {
 #project-section .carousel-item h3 {
   text-align: center;
   margin-bottom: 100px;
+}
+#project-section .carousel-item h3 i {
+  font-size: 24px;
+  margin-left: 5px;
+  transition: 0.5s;
+}
+@media (min-width: 480px) {
+  #project-section .carousel-item h3 i:hover {
+    transform: translateY(-4px);
+  }
 }
 @media (max-width: 1100px) {
   #project-section .carousel-item h3 {
