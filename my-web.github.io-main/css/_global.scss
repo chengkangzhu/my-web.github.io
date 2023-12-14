@@ -1,0 +1,46 @@
+html {
+	box-sizing: border-box;
+}
+
+*,
+*::after,
+*::before {
+	box-sizing: inherit;
+}
+
+body,
+body * {
+	font-family: "League Spartan", sans-serif;
+	margin: 0;
+	padding: 0;
+	list-style-type: none;
+	color: #000000;
+}
+
+h1 {
+	font-size: 50px;
+	font-weight: bold;
+}
+
+h2 {
+	font-size: 48px;
+	font-weight: bold;
+}
+
+h3 {
+	font-size: 30px;
+	font-weight: 400;
+	line-height: 130%;
+}
+
+h4 {
+	font-size: 20px;
+	font-weight: 400;
+}
+
+$p-fs: 22px, 20px, 18px, 16px;
+
+p {
+	font-weight: 300;
+	line-height: 130%;
+}
