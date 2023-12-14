@@ -632,7 +632,7 @@ header {
 
 			opacity: 0;
 			transform: translateX(-90px);
-			transition: opacity 0.4s, transform 0.4s;
+			transition: opacity 0.5s, transform 0.5s;
 
 			&.animation-active {
 				opacity: 1;
@@ -1036,7 +1036,7 @@ header {
 	background-color: #6364651a;
 	padding: 40px;
 	max-width: 720px;
-	margin: 80px auto;
+	margin: 80px auto; 
 
 	h2 {
 		margin-bottom: 10px;
