@@ -47,14 +47,22 @@ body {
   width: 100%;
   min-height: 100vh;
   overflow-x: hidden;
+  background-image: url("../images/bg-2.jpg");
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  background-size: cover;
 }
 
 header {
   position: sticky;
   top: 0;
-  background-color: white;
-  box-shadow: 0 2px 12px rgba(0, 0, 0, 0.25);
   z-index: 10000;
+  background: linear-gradient(135deg, rgba(255, 255, 255, 0.1), rgba(255, 255, 255, 0));
+  backdrop-filter: blur(100px);
+  -webkit-backdrop-filter: blur(10px);
+  border-radius: 10px;
+  border-top: solid 1px rgba(255, 255, 255, 0.18);
+  box-shadow: 0 2px 12px rgba(0, 0, 0, 0.25);
 }
 header nav {
   display: flex;
@@ -229,15 +237,19 @@ header nav ul a i {
 #about-section {
   display: flex;
   flex-direction: column;
-  background-color: rgb(236, 235, 235);
   max-width: 880px;
   padding: 50px 80px 80px;
   border-radius: 30px;
   margin-bottom: 120px;
-  box-shadow: 8px 9px 10px #696969;
   margin-left: auto;
   margin-right: calc(1px + 10vw);
   position: relative;
+  background: linear-gradient(135deg, rgba(255, 255, 255, 0.1), rgba(255, 255, 255, 0));
+  backdrop-filter: blur(100px);
+  -webkit-backdrop-filter: blur(10px);
+  border-radius: 10px;
+  border-top: solid 1px rgba(255, 255, 255, 0.18);
+  box-shadow: 0 8px 32px 0 rgba(0, 0, 0, 0.37);
 }
 #about-section #about-section-navpoint {
   position: absolute;
@@ -302,8 +314,13 @@ header nav ul a i {
 
 #project-section {
   background-color: #dbdbdb;
-  border: 1px solid rgb(184, 184, 184);
   position: relative;
+  background: linear-gradient(135deg, rgba(255, 255, 255, 0.1), rgba(255, 255, 255, 0));
+  backdrop-filter: blur(100px);
+  -webkit-backdrop-filter: blur(10px);
+  border-radius: 10px;
+  border-top: solid 1px rgba(255, 255, 255, 0.18);
+  box-shadow: 0 8px 32px 0 rgba(0, 0, 0, 0.37);
 }
 #project-section #project-section-navpoint {
   position: absolute;
@@ -426,9 +443,8 @@ header nav ul a i {
 #project-section .carousel-control-prev,
 #project-section .carousel-control-next {
   width: 10vw;
-  background-color: #adadad;
   opacity: 1;
-  box-shadow: 0px 0px 10px -2px black;
+  box-shadow: 0px 0px 5px 0px rgba(0, 0, 0, 0.514);
 }
 @media (max-width: 800px) {
   #project-section .carousel-control-prev,
@@ -446,7 +462,7 @@ header nav ul a i {
 }
 #project-section .carousel-control-prev:hover,
 #project-section .carousel-control-next:hover {
-  background-color: rgb(122, 122, 122);
+  background-color: rgba(255, 255, 255, 0.138);
 }
 @media (max-width: 1456px) {
   #project-section .carousel-control-prev:hover,
@@ -527,13 +543,7 @@ header nav ul a i {
   0% {
     border-radius: 50%;
   }
-  25% {
-    border-radius: 54% 46% 44% 56%/40% 58% 42% 60%;
-  }
   50% {
-    border-radius: 50%;
-  }
-  75% {
     border-radius: 54% 46% 44% 56%/40% 58% 42% 60%;
   }
   100% {
@@ -544,13 +554,7 @@ header nav ul a i {
   0% {
     border-radius: 50%;
   }
-  25% {
-    border-radius: 60% 40% 48% 52%/53% 55% 45% 47%;
-  }
   50% {
-    border-radius: 50%;
-  }
-  75% {
     border-radius: 60% 40% 48% 52%/53% 55% 45% 47%;
   }
   100% {
@@ -561,13 +565,7 @@ header nav ul a i {
   0% {
     border-radius: 50%;
   }
-  25% {
-    border-radius: 41% 59% 36% 64%/62% 55% 45% 38%;
-  }
   50% {
-    border-radius: 50%;
-  }
-  75% {
     border-radius: 41% 59% 36% 64%/62% 55% 45% 38%;
   }
   100% {
@@ -575,7 +573,7 @@ header nav ul a i {
   }
 }
 #service-section .service-drops .drop:nth-child(1) {
-  animation: drop-1-animation linear 3.5s infinite;
+  animation: drop-1-animation linear 3s infinite;
   position: relative;
   bottom: 20px;
 }
@@ -583,13 +581,13 @@ header nav ul a i {
   animation: drop-1-animation linear 2s infinite;
 }
 #service-section .service-drops .drop:nth-child(2) {
-  animation: drop-2-animation linear 3.8s infinite;
+  animation: drop-2-animation linear 3s infinite;
 }
 #service-section .service-drops .drop:nth-child(2):hover {
   animation: drop-1-animation linear 2s infinite;
 }
 #service-section .service-drops .drop:nth-child(3) {
-  animation: drop-3-animation linear 3.1s infinite;
+  animation: drop-3-animation linear 3s infinite;
   margin-bottom: 40px;
 }
 #service-section .service-drops .drop:nth-child(3):hover {
@@ -639,6 +637,12 @@ header nav ul a i {
   opacity: 0;
   transform: translateX(-90px);
   transition: opacity 0.5s, transform 0.5s;
+  background: linear-gradient(135deg, rgba(255, 255, 255, 0.1), rgba(255, 255, 255, 0));
+  backdrop-filter: blur(100px);
+  -webkit-backdrop-filter: blur(10px);
+  border-radius: 10px;
+  border-top: solid 1px rgba(255, 255, 255, 0.18);
+  box-shadow: 0 8px 32px 0 rgba(0, 0, 0, 0.37);
 }
 #skill-section .skill-container .skill-box.animation-active {
   opacity: 1;
@@ -772,12 +776,16 @@ header nav ul a i {
   flex-wrap: wrap;
 }
 #contact-section form {
-  border: 1px solid black;
   max-width: 520px;
   width: 100%;
-  box-shadow: 5px 5px 13px rgba(0, 0, 0, 0.253);
   border-radius: 38px;
   padding: 40px;
+  background: linear-gradient(135deg, rgba(255, 255, 255, 0.1), rgba(255, 255, 255, 0));
+  backdrop-filter: blur(100px);
+  -webkit-backdrop-filter: blur(10px);
+  border-radius: 10px;
+  border-top: solid 1px rgba(255, 255, 255, 0.18);
+  box-shadow: 0 8px 32px 0 rgba(0, 0, 0, 0.37);
 }
 #contact-section form h3 {
   font-weight: 300;
@@ -793,6 +801,8 @@ header nav ul a i {
   font-size: 20px;
   font-weight: 300;
   width: 50%;
+  border: none;
+  border-radius: 5px;
 }
 #contact-section form input::-moz-placeholder {
   color: #737373;
@@ -837,12 +847,16 @@ header nav ul a i {
 }
 #contact-section .contact-info {
   margin-top: 100px;
-  border: 1px solid black;
   width: 370px;
   height: 240px;
   border-radius: 10px;
-  box-shadow: 5px 5px 4px rgba(0, 0, 0, 0.247);
   padding: 30px;
+  background: linear-gradient(135deg, rgba(255, 255, 255, 0.1), rgba(255, 255, 255, 0));
+  backdrop-filter: blur(100px);
+  -webkit-backdrop-filter: blur(10px);
+  border-radius: 10px;
+  border-top: solid 1px rgba(255, 255, 255, 0.18);
+  box-shadow: 0 8px 32px 0 rgba(0, 0, 0, 0.37);
 }
 @media (max-width: 1199px) {
   #contact-section .contact-info {
