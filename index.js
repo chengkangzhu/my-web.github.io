@@ -1,3 +1,6 @@
+
+// toggle navbar menu 
+
 $(".hamburger, #navbar a").on("click", () => {
 	let currentVisibility = $("#navbar").css("visibility");
 	let newVisibility = currentVisibility === "hidden" ? "visible" : "hidden";
@@ -9,6 +12,8 @@ $(".hamburger, #navbar a").on("click", () => {
 	}
 });
 
+
+//scroll animation for water droplets in service section
 const serviceSection = document.getElementById("service-section");
 const drops = serviceSection.querySelectorAll(".drop");
 
@@ -32,6 +37,8 @@ function handleScroll() {
 
 window.addEventListener("scroll", handleScroll);
 
+
+//slide in animation for project
 const projectSection = document.querySelector("#project-section");
 
 // Add a scroll event listener to the window object
@@ -56,6 +63,8 @@ window.addEventListener("scroll", () => {
 	}
 });
 
+
+//fade in animation for skillboxes
 const skillBoxContainer = document.querySelector(".skill-container");
 
 const options = {
@@ -80,4 +89,10 @@ const observer = new IntersectionObserver((entries) => {
 }, options);
 
 observer.observe(skillBoxContainer);
-s;
+
+//change main display by hover subimages
+function changeDisplay (mainDisplay, newImg){
+	let displayElement = document.getElementById(mainDisplay)
+	displayElement.src = newImg.src
+	console.log(newImg.src)
+}

@@ -47,13 +47,12 @@ body {
   width: 100%;
   min-height: 100vh;
   overflow-x: hidden;
-  background-color: rgba(241, 241, 241, 0.7058823529);
 }
 
 header {
   position: sticky;
   top: 0;
-  background-color: #fff;
+  background-color: white;
   box-shadow: 0 2px 12px rgba(0, 0, 0, 0.25);
   z-index: 10000;
 }
@@ -235,7 +234,7 @@ header nav ul a i {
   padding: 50px 80px 80px;
   border-radius: 30px;
   margin-bottom: 120px;
-  box-shadow: 8px 9px #696969;
+  box-shadow: 8px 9px 10px #696969;
   margin-left: auto;
   margin-right: calc(1px + 10vw);
   position: relative;
@@ -342,32 +341,43 @@ header nav ul a i {
   flex-wrap: wrap;
   justify-content: space-evenly;
 }
-#project-section .carousel-item .project-content a {
-  display: flex;
-  justify-content: center;
+#project-section .carousel-item .project-content .image-container {
   transform: translateX(0%);
   transition: transform 1s ease-in-out, opacity 1s;
   opacity: 1;
 }
-#project-section .carousel-item .project-content a::after {
-  content: "Click to visit my website";
-  color: rgb(69, 69, 69);
-  position: absolute;
-  bottom: -30px;
+#project-section .carousel-item .project-content .image-container a {
+  display: flex;
+  justify-content: center;
 }
-#project-section .carousel-item .project-content img {
+#project-section .carousel-item .project-content .image-container a img {
   height: calc(100px + 20vw);
+  box-shadow: 2px 2px 12px rgba(0, 0, 0, 0.25);
+  border-radius: 5px;
 }
 @media (max-width: 1456px) {
-  #project-section .carousel-item .project-content img {
+  #project-section .carousel-item .project-content .image-container a img {
     height: auto;
     width: 90%;
   }
 }
 @media (max-width: 800px) {
-  #project-section .carousel-item .project-content img {
+  #project-section .carousel-item .project-content .image-container a img {
     width: 100%;
   }
+}
+#project-section .carousel-item .project-content .image-container .sub-images-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 10px;
+  padding: 15px 0;
+}
+#project-section .carousel-item .project-content .image-container .sub-images-container img {
+  max-width: 80px;
+  height: auto;
+  cursor: pointer;
+  border-radius: 3px;
 }
 #project-section .carousel-item .project-content .project-description {
   max-width: 400px;
@@ -468,6 +478,7 @@ header nav ul a i {
 }
 #service-section .service-drops .drop {
   position: relative;
+  border: 1px solid white;
   padding: 100px 100px;
   max-width: 450px;
   min-height: 420px;
@@ -477,6 +488,7 @@ header nav ul a i {
   margin-left: 20px;
   opacity: 0;
   transform: translateY(100px);
+  background: rgba(255, 255, 255, 0.486);
   /* Define animation keyframes for the first .drop element */
   /* Define animation keyframes for the second .drop element */
   /* Define animation keyframes for the third .drop element */
@@ -490,9 +502,6 @@ header nav ul a i {
   #service-section .service-drops .drop {
     padding: 80px;
   }
-}
-#service-section .service-drops .drop:hover {
-  border-radius: 50% !important;
 }
 #service-section .service-drops .drop::before {
   content: "";
@@ -518,7 +527,13 @@ header nav ul a i {
   0% {
     border-radius: 50%;
   }
+  25% {
+    border-radius: 54% 46% 44% 56%/40% 58% 42% 60%;
+  }
   50% {
+    border-radius: 50%;
+  }
+  75% {
     border-radius: 54% 46% 44% 56%/40% 58% 42% 60%;
   }
   100% {
@@ -529,7 +544,13 @@ header nav ul a i {
   0% {
     border-radius: 50%;
   }
+  25% {
+    border-radius: 60% 40% 48% 52%/53% 55% 45% 47%;
+  }
   50% {
+    border-radius: 50%;
+  }
+  75% {
     border-radius: 60% 40% 48% 52%/53% 55% 45% 47%;
   }
   100% {
@@ -540,7 +561,13 @@ header nav ul a i {
   0% {
     border-radius: 50%;
   }
+  25% {
+    border-radius: 41% 59% 36% 64%/62% 55% 45% 38%;
+  }
   50% {
+    border-radius: 50%;
+  }
+  75% {
     border-radius: 41% 59% 36% 64%/62% 55% 45% 38%;
   }
   100% {
@@ -548,16 +575,25 @@ header nav ul a i {
   }
 }
 #service-section .service-drops .drop:nth-child(1) {
-  animation: drop-1-animation linear 2s infinite;
+  animation: drop-1-animation linear 3.5s infinite;
   position: relative;
   bottom: 20px;
 }
+#service-section .service-drops .drop:nth-child(1):hover {
+  animation: drop-1-animation linear 2s infinite;
+}
 #service-section .service-drops .drop:nth-child(2) {
-  animation: drop-2-animation linear 1.8s infinite;
+  animation: drop-2-animation linear 3.8s infinite;
+}
+#service-section .service-drops .drop:nth-child(2):hover {
+  animation: drop-1-animation linear 2s infinite;
 }
 #service-section .service-drops .drop:nth-child(3) {
-  animation: drop-3-animation linear 2.1s infinite;
+  animation: drop-3-animation linear 3.1s infinite;
   margin-bottom: 40px;
+}
+#service-section .service-drops .drop:nth-child(3):hover {
+  animation: drop-1-animation linear 2s infinite;
 }
 #service-section h4 {
   margin: 10px 0 44px;

@@ -468,7 +468,7 @@
 				<div id="about-section-navpoint"></div>
 				<h3>
 					About Me
-					<img src="./images/about-cion.png" alt="smirk icon" />
+					<img src="./images/about-icon.png" alt="smirk icon" />
 				</h3>
 				<p>
 					Hello, I'm Cheng Kang Zhu, a 18-year-old web developer from
@@ -505,6 +505,7 @@
 				<div id="project-section-navpoint"></div>
 				<div class="carousel-inner">
 					<div class="carousel-item active">
+						<!-- item header -->
 						<h3>
 							CasaVibe
 							<a
@@ -513,33 +514,81 @@
 								><i class="fa-brands fa-github"></i
 							></a>
 						</h3>
+
+						<!-- item body -->
 						<div class="project-content">
-							<a
-								class="project-image-animate"
-								href="https://casavibe.onrender.com/"
-								target="_blank"
-							>
-								<img
-									src="./images/project-0.png"
-									alt="space-toursm website project"
-							/></a>
+							<div class="image-container project-image-animate">
+								<!-- main image display -->
+								<a
+									href="https://casavibe.onrender.com/"
+									target="_blank"
+								>
+									<img
+										src="./images/casavibe-1.png"
+										alt="casavibe project 1"
+										id="casavibe"
+									/>
+								</a>
+
+								<!-- sub images -->
+								<div class="sub-images-container">
+									<img
+										src="./images/casavibe-1.png"
+										alt="casavibe project 1"
+										onmouseenter="changeDisplay('casavibe', this)"
+									/>
+									<img
+										src="./images/casavibe-2.png"
+										alt="casavibe project 2"
+										onmouseenter="changeDisplay('casavibe', this)"
+									/>
+									<img
+										src="./images/casavibe-3.png"
+										alt="casavibe project 3"
+										onmouseenter="changeDisplay('casavibe', this)"
+									/>
+									<img
+										src="./images/casavibe-4.png"
+										alt="casavibe project 4"
+										onmouseenter="changeDisplay('casavibe', this)"
+									/>
+									<img
+										src="./images/casavibe-5.png"
+										alt="casavibe project 5"
+										onmouseenter="changeDisplay('casavibe',this)"
+									/>
+								</div>
+							</div>
 							<div
 								class="project-description project-description-animate"
 							>
 								<p>
-									<strong>Project Description:</strong>  
-									CasaVibe is an e-commerce platform that offers furniture and home decor from IKEA API
+									<strong>Project Description:</strong>
+									CasaVibe is an e-commerce platform that
+									offers furniture and home decor from IKEA
+									API
 
 									<br />
 									<br />
 
-									<strong>Aim:</strong> 
-									I took on the CasaVibe project to get better at working with APIs and full-stack development. I learned how to use Axios for handling API requests and Redux Toolkit for managing state. Using React, I turned design concepts from Figma into a responsive user interface. On the backend, I streamlined operations with Express, Mongoose, and Node.js, ensuring secure authentication with JWT.
+									<strong>Aim:</strong>
+									I took on the CasaVibe project to get better
+									at working with APIs and full-stack
+									development. I learned how to use Axios for
+									handling API requests and Redux Toolkit for
+									managing state. Using React, I turned design
+									concepts from Figma into a responsive user
+									interface. On the backend, I streamlined
+									operations with Express, Mongoose, and
+									Node.js, ensuring secure authentication with
+									JWT.
 
 									<br />
 									<br />
 
-									<strong>Stack:</strong> React, Redux Toolkit, Axios, Express, Mongoose, JWT, Node, Oauth2
+									<strong>Stack:</strong> React, Redux
+									Toolkit, Axios, Express, Mongoose, JWT,
+									Node, Oauth2
 								</p>
 							</div>
 						</div>
@@ -554,14 +603,43 @@
 							></a>
 						</h3>
 						<div class="project-content">
-							<a
-								href="https://lookscout-chengkangzhu.onrender.com/"
-								target="_blank"
-							>
-								<img
-									src="./images/project-2.jpg"
-									alt="space-toursm website project"
-							/></a>
+							<div class="image-container">
+								<!-- main image display -->
+								<a
+									href="https://lookscout-chengkangzhu.onrender.com/"
+									target="_blank"
+								>
+									<img
+										src="./images/lookscout-1.png"
+										id="lookscout"
+										alt="lookscout website project"
+								/></a>
+
+								<!-- sub images -->
+								<div class="sub-images-container">
+									<img
+										src="./images/lookscout-1.png"
+										alt="lookscout project 1"
+										onmouseenter="changeDisplay('lookscout', this)"
+									/>
+									<img
+										src="./images/lookscout-2.png"
+										alt="lookscout project 2"
+										onmouseenter="changeDisplay('lookscout', this)"
+									/>
+									<img
+										src="./images/lookscout-3.png"
+										alt="lookscout project 3"
+										onmouseenter="changeDisplay('lookscout', this)"
+									/>
+									<img
+										src="./images/lookscout-4.png"
+										alt="lookscout project 4"
+										onmouseenter="changeDisplay('lookscout', this)"
+									/>
+								</div>
+							</div>
+
 							<div class="project-description">
 								<p>
 									<strong>Project Description:</strong>
@@ -603,14 +681,48 @@
 							></a>
 						</h3>
 						<div class="project-content">
-							<a
-								href="https://chengkangzhu.github.io/space-tourism/"
-								target="_blank"
-							>
-								<img
-									src="./images/project-1.jpg"
-									alt="space-toursm website project"
-							/></a>
+							<div class="image-container">
+								<!-- main image display -->
+								<a
+									href="https://chengkangzhu.github.io/space-tourism/"
+									target="_blank"
+								>
+									<img
+										src="./images/space-tourism-1.png"
+										alt="space-tourism website project"
+										id="space-tourism"
+								/></a>
+
+								<!-- sub images -->
+								<div class="sub-images-container">
+									<img
+										src="./images/space-tourism-1.png"
+										alt="space-tourism project 1"
+										onmouseenter="changeDisplay('space-tourism', this)"
+									/>
+									<img
+										src="./images/space-tourism-2.png"
+										alt="space-tourism project 2"
+										onmouseenter="changeDisplay('space-tourism', this)"
+									/>
+									<img
+										src="./images/space-tourism-3.png"
+										alt="space-tourism project 3"
+										onmouseenter="changeDisplay('space-tourism', this)"
+									/>
+									<img
+										src="./images/space-tourism-3.png"
+										alt="space-tourism project 3"
+										onmouseenter="changeDisplay('space-tourism', this)"
+									/>
+									<img
+										src="./images/space-tourism-4.png"
+										alt="space-tourism project 4"
+										onmouseenter="changeDisplay('space-tourism', this)"
+									/>
+								</div>
+							</div>
+
 							<div class="project-description">
 								<p>
 									<strong>Project Description:</strong> A
@@ -831,7 +943,7 @@
 							alt="skill icon"
 						/>
 						<p>Redux Toolkit</p>
-					</div> 
+					</div>
 				</div>
 			</section>
 			<section id="contact-section">
@@ -925,7 +1037,7 @@
 					<a href="https://github.com/chengkangzhu" target="_blank"
 						><i class="fa-brands fa-github"></i
 					></a>
-				</li> 
+				</li>
 				<li>
 					<a
 						href="https://www.linkedin.com/in/cheng-kang-zhu-84629124a/"
