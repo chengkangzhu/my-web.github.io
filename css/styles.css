@@ -60,7 +60,6 @@ header {
   background: linear-gradient(135deg, rgba(255, 255, 255, 0.1), rgba(255, 255, 255, 0));
   backdrop-filter: blur(100px);
   -webkit-backdrop-filter: blur(10px);
-  border-radius: 10px;
   border-top: solid 1px rgba(255, 255, 255, 0.18);
   box-shadow: 0 2px 12px rgba(0, 0, 0, 0.25);
 }
@@ -153,12 +152,15 @@ header nav ul a i {
   text-decoration: none;
   display: inline-block;
   margin-bottom: 140px;
+  background-color: rgba(0, 0, 0, 0.65);
+  border-radius: 2px;
+  box-shadow: 0 8px 12px 0 rgba(0, 0, 0, 0.37);
 }
 #hero-section .intro a i {
   margin-left: 10px;
   color: white;
   position: relative;
-  top: 3px;
+  top: 2px;
 }
 #hero-section .illustration {
   display: flex;
@@ -239,7 +241,6 @@ header nav ul a i {
   flex-direction: column;
   max-width: 880px;
   padding: 50px 80px 80px;
-  border-radius: 30px;
   margin-bottom: 120px;
   margin-left: auto;
   margin-right: calc(1px + 10vw);
@@ -275,9 +276,10 @@ header nav ul a i {
   text-decoration: none;
   display: flex;
   align-items: center;
-  border: 1px solid #000000;
+  border: 1px solid rgba(0, 0, 0, 0.4392156863);
   width: 240px;
   padding: 6px 30px 2px;
+  border-radius: 2px;
   justify-content: space-around;
   margin: auto;
   margin-top: 40px;
@@ -296,11 +298,8 @@ header nav ul a i {
 }
 @media (max-width: 900px) {
   #about-section {
-    border: 1px solid black;
-    border-bottom: none;
     border-bottom-left-radius: 0;
     border-bottom-right-radius: 0;
-    box-shadow: 0px 5px 4px rgba(0, 0, 0, 0.25);
     padding: 50px;
     margin-bottom: 0;
     padding-bottom: 100px;
@@ -318,7 +317,6 @@ header nav ul a i {
   background: linear-gradient(135deg, rgba(255, 255, 255, 0.1), rgba(255, 255, 255, 0));
   backdrop-filter: blur(100px);
   -webkit-backdrop-filter: blur(10px);
-  border-radius: 10px;
   border-top: solid 1px rgba(255, 255, 255, 0.18);
   box-shadow: 0 8px 32px 0 rgba(0, 0, 0, 0.37);
 }
@@ -376,11 +374,7 @@ header nav ul a i {
   #project-section .carousel-item .project-content .image-container a img {
     height: auto;
     width: 90%;
-  }
-}
-@media (max-width: 800px) {
-  #project-section .carousel-item .project-content .image-container a img {
-    width: 100%;
+    max-width: 90vw;
   }
 }
 #project-section .carousel-item .project-content .image-container .sub-images-container {
@@ -391,10 +385,11 @@ header nav ul a i {
   padding: 15px 0;
 }
 #project-section .carousel-item .project-content .image-container .sub-images-container img {
-  max-width: 80px;
+  width: 80px;
   height: auto;
   cursor: pointer;
   border-radius: 3px;
+  max-width: 16vw;
 }
 #project-section .carousel-item .project-content .project-description {
   max-width: 400px;
@@ -444,7 +439,11 @@ header nav ul a i {
 #project-section .carousel-control-next {
   width: 10vw;
   opacity: 1;
-  box-shadow: 0px 0px 5px 0px rgba(0, 0, 0, 0.514);
+  box-shadow: 0px 0px 10px 0px rgb(121, 121, 121);
+}
+#project-section .carousel-control-prev span,
+#project-section .carousel-control-next span {
+  filter: grayscale(50%) brightness(0);
 }
 @media (max-width: 800px) {
   #project-section .carousel-control-prev,
@@ -494,17 +493,16 @@ header nav ul a i {
 }
 #service-section .service-drops .drop {
   position: relative;
-  border: 1px solid white;
   padding: 100px 100px;
   max-width: 450px;
   min-height: 420px;
-  box-shadow: inset 20px 20px 20px rgba(0, 0, 0, 0.05), 25px 35px 20px rgba(0, 0, 0, 0.05), 25px 30px 30px rgba(0, 0, 0, 0.05), inset -20px -20px 25px rgb(255, 255, 255);
+  box-shadow: inset 20px 20px 20px rgba(0, 0, 0, 0.05), 25px 35px 20px rgba(0, 0, 0, 0.05), 25px 30px 30px rgba(0, 0, 0, 0.05), inset -20px -20px 25px rgba(255, 255, 255, 0.6);
   transition: 0.6s linear;
   margin-right: 20px;
   margin-left: 20px;
   opacity: 0;
   transform: translateY(100px);
-  background: rgba(255, 255, 255, 0.486);
+  background: rgba(255, 255, 255, 0.467);
   /* Define animation keyframes for the first .drop element */
   /* Define animation keyframes for the second .drop element */
   /* Define animation keyframes for the third .drop element */
@@ -579,12 +577,14 @@ header nav ul a i {
 }
 #service-section .service-drops .drop:nth-child(1):hover {
   animation: drop-1-animation linear 2s infinite;
+  transform: scale(1.2);
 }
 #service-section .service-drops .drop:nth-child(2) {
   animation: drop-2-animation linear 3s infinite;
 }
 #service-section .service-drops .drop:nth-child(2):hover {
   animation: drop-1-animation linear 2s infinite;
+  transform: scale(1.2);
 }
 #service-section .service-drops .drop:nth-child(3) {
   animation: drop-3-animation linear 3s infinite;
@@ -592,6 +592,7 @@ header nav ul a i {
 }
 #service-section .service-drops .drop:nth-child(3):hover {
   animation: drop-1-animation linear 2s infinite;
+  transform: scale(1.2);
 }
 #service-section h4 {
   margin: 10px 0 44px;
@@ -640,7 +641,6 @@ header nav ul a i {
   background: linear-gradient(135deg, rgba(255, 255, 255, 0.1), rgba(255, 255, 255, 0));
   backdrop-filter: blur(100px);
   -webkit-backdrop-filter: blur(10px);
-  border-radius: 10px;
   border-top: solid 1px rgba(255, 255, 255, 0.18);
   box-shadow: 0 8px 32px 0 rgba(0, 0, 0, 0.37);
 }
@@ -759,6 +759,22 @@ header nav ul a i {
   transform: translate(-5px, -5px);
   transition: transform 0.4s, box-shadow 0.4s;
 }
+#skill-section .skill-container .skill-box:nth-child(13) {
+  z-index: 1;
+}
+#skill-section .skill-container .skill-box:nth-child(13):hover {
+  box-shadow: 0 0 8px rgba(0, 0, 0, 0.05), 0 0px 12px rgba(0, 0, 0, 0.1), 0 8px 20px rgba(0, 0, 0, 0.1), inset 0 0 5px rgba(255, 255, 255, 0), inset 0 0 10px rgba(125, 109, 109, 0), 5px 5px #7B7B7B;
+  transform: translate(-5px, -5px);
+  transition: transform 0.4s, box-shadow 0.4s;
+}
+#skill-section .skill-container .skill-box:nth-child(14) {
+  z-index: 1;
+}
+#skill-section .skill-container .skill-box:nth-child(14):hover {
+  box-shadow: 0 0 8px rgba(0, 0, 0, 0.05), 0 0px 12px rgba(0, 0, 0, 0.1), 0 8px 20px rgba(0, 0, 0, 0.1), inset 0 0 5px rgba(255, 255, 255, 0.5), inset 0 0 10px rgba(255, 255, 255, 0.5), 5px 5px #7D57B8;
+  transform: translate(-5px, -5px);
+  transition: transform 0.4s, box-shadow 0.4s;
+}
 @media (max-width: 1000px) {
   #skill-section .skill-container {
     gap: 18px;
@@ -778,7 +794,6 @@ header nav ul a i {
 #contact-section form {
   max-width: 520px;
   width: 100%;
-  border-radius: 38px;
   padding: 40px;
   background: linear-gradient(135deg, rgba(255, 255, 255, 0.1), rgba(255, 255, 255, 0));
   backdrop-filter: blur(100px);
@@ -849,7 +864,6 @@ header nav ul a i {
   margin-top: 100px;
   width: 370px;
   height: 240px;
-  border-radius: 10px;
   padding: 30px;
   background: linear-gradient(135deg, rgba(255, 255, 255, 0.1), rgba(255, 255, 255, 0));
   backdrop-filter: blur(100px);
