@@ -82,7 +82,7 @@ const observer = new IntersectionObserver((entries) => {
 				setTimeout(() => {
 					skillBox.classList.add("animation-active");
 				}, delay);
-				delay += 200; // increase the delay for each element by 200ms
+				delay += 150; // increase the delay for each element by 200ms
 			});
 		}
 	});
