@@ -500,17 +500,10 @@ header nav ul a i {
   transition: 0.6s linear;
   margin-right: 20px;
   margin-left: 20px;
-  opacity: 0;
-  transform: translateY(100px);
   background: rgba(255, 255, 255, 0.467);
   /* Define animation keyframes for the first .drop element */
   /* Define animation keyframes for the second .drop element */
   /* Define animation keyframes for the third .drop element */
-}
-#service-section .service-drops .drop.animate {
-  opacity: 1;
-  transform: translateY(0);
-  transition: opacity 1.5s, transform 1.5s;
 }
 @media (max-width: 470px) {
   #service-section .service-drops .drop {
@@ -575,24 +568,12 @@ header nav ul a i {
   position: relative;
   bottom: 20px;
 }
-#service-section .service-drops .drop:nth-child(1):hover {
-  animation: drop-1-animation linear 2s infinite;
-  transform: scale(1.2);
-}
 #service-section .service-drops .drop:nth-child(2) {
   animation: drop-2-animation linear 3s infinite;
-}
-#service-section .service-drops .drop:nth-child(2):hover {
-  animation: drop-1-animation linear 2s infinite;
-  transform: scale(1.2);
 }
 #service-section .service-drops .drop:nth-child(3) {
   animation: drop-3-animation linear 3s infinite;
   margin-bottom: 40px;
-}
-#service-section .service-drops .drop:nth-child(3):hover {
-  animation: drop-1-animation linear 2s infinite;
-  transform: scale(1.2);
 }
 #service-section h4 {
   margin: 10px 0 44px;
