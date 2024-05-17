@@ -500,10 +500,17 @@ header nav ul a i {
   transition: 0.6s linear;
   margin-right: 20px;
   margin-left: 20px;
+  opacity: 0;
+  transform: translateY(100px);
   background: rgba(255, 255, 255, 0.467);
   /* Define animation keyframes for the first .drop element */
   /* Define animation keyframes for the second .drop element */
   /* Define animation keyframes for the third .drop element */
+}
+#service-section .service-drops .drop.animate {
+  opacity: 1;
+  transform: translateY(0);
+  transition: opacity 1.5s, transform 1.5s;
 }
 @media (max-width: 470px) {
   #service-section .service-drops .drop {
@@ -639,59 +646,8 @@ header nav ul a i {
 #skill-section .skill-container .skill-box p {
   font-size: 18px;
 }
-#skill-section .skill-container .skill-box:hover {
-  transform: translate(-5px, -5px);
-  transition: transform 0.4s, box-shadow 0.4s;
-}
-#skill-section .skill-container .skill-box:nth-child(1):hover {
-  box-shadow: 0 0 8px rgba(0, 0, 0, 0.05), 0 0px 12px rgba(0, 0, 0, 0.1), 0 8px 20px rgba(0, 0, 0, 0.1), inset 0 0 5px rgba(255, 255, 255, 0), inset 0 0 10px rgba(255, 255, 255, 0), 5px 5px #f7a337;
-}
-#skill-section .skill-container .skill-box:nth-child(2):hover {
-  box-shadow: 0 0 8px rgba(0, 0, 0, 0.05), 0 0px 12px rgba(0, 0, 0, 0.1), 0 8px 20px rgba(0, 0, 0, 0.1), inset 0 0 5px rgba(255, 255, 255, 0), inset 0 0 10px rgba(255, 255, 255, 0), 5px 5px #1b84c1;
-}
-#skill-section .skill-container .skill-box:nth-child(3):hover {
-  box-shadow: 0 0 8px rgba(0, 0, 0, 0.05), 0 0px 12px rgba(0, 0, 0, 0.1), 0 8px 20px rgba(0, 0, 0, 0.1), inset 0 0 5px rgba(255, 255, 255, 0), inset 0 0 10px rgba(125, 109, 109, 0), 5px 5px #e8d44d;
-}
-#skill-section .skill-container .skill-box:nth-child(4):hover {
-  box-shadow: 0 0 8px rgba(0, 0, 0, 0.05), 0 0px 12px rgba(0, 0, 0, 0.1), 0 8px 20px rgba(0, 0, 0, 0.1), inset 0 0 5px rgba(255, 255, 255, 0), inset 0 0 10px rgba(125, 109, 109, 0), 5px 5px #c96195;
-}
-#skill-section .skill-container .skill-box:nth-child(5):hover {
-  box-shadow: 0 0 8px rgba(0, 0, 0, 0.05), 0 0px 12px rgba(0, 0, 0, 0.1), 0 8px 20px rgba(0, 0, 0, 0.1), inset 0 0 5px rgba(255, 255, 255, 0), inset 0 0 10px rgba(125, 109, 109, 0), 5px 5px #790af0;
-}
-#skill-section .skill-container .skill-box:nth-child(6):hover {
-  box-shadow: 0 0 8px rgba(0, 0, 0, 0.05), 0 0px 12px rgba(0, 0, 0, 0.1), 0 8px 20px rgba(0, 0, 0, 0.1), inset 0 0 5px rgba(255, 255, 255, 0), inset 0 0 10px rgba(125, 109, 109, 0), 5px 5px #1163a4;
-}
 #skill-section .skill-container .skill-box:nth-child(7) img {
   height: 25%;
-}
-#skill-section .skill-container .skill-box:nth-child(7):hover {
-  box-shadow: 0 0 8px rgba(0, 0, 0, 0.05), 0 0px 12px rgba(0, 0, 0, 0.1), 0 8px 20px rgba(0, 0, 0, 0.1), inset 0 0 5px rgba(255, 255, 255, 0), inset 0 0 10px rgba(125, 109, 109, 0), 5px 5px #c63332;
-}
-#skill-section .skill-container .skill-box:nth-child(8):hover {
-  box-shadow: 0 0 8px rgba(0, 0, 0, 0.05), 0 0px 12px rgba(0, 0, 0, 0.1), 0 8px 20px rgba(0, 0, 0, 0.1), inset 0 0 5px rgba(255, 255, 255, 0), inset 0 0 10px rgba(125, 109, 109, 0), 5px 5px #e84d31;
-}
-#skill-section .skill-container .skill-box:nth-child(9) img {
-  height: 60%;
-  margin-bottom: -15px;
-  margin-top: -10px;
-}
-#skill-section .skill-container .skill-box:nth-child(9):hover {
-  box-shadow: 0 0 8px rgba(0, 0, 0, 0.05), 0 0px 12px rgba(0, 0, 0, 0.1), 0 8px 20px rgba(0, 0, 0, 0.1), inset 0 0 5px rgba(255, 255, 255, 0), inset 0 0 10px rgba(125, 109, 109, 0), 5px 5px #07a74d;
-}
-#skill-section .skill-container .skill-box:nth-child(10):hover {
-  box-shadow: 0 0 8px rgba(0, 0, 0, 0.05), 0 0px 12px rgba(0, 0, 0, 0.1), 0 8px 20px rgba(0, 0, 0, 0.1), inset 0 0 5px rgba(255, 255, 255, 0), inset 0 0 10px rgba(125, 109, 109, 0), 5px 5px #4f9b42;
-}
-#skill-section .skill-container .skill-box:nth-child(11):hover {
-  box-shadow: 0 0 8px rgba(0, 0, 0, 0.05), 0 0px 12px rgba(0, 0, 0, 0.1), 0 8px 20px rgba(0, 0, 0, 0.1), inset 0 0 5px rgba(255, 255, 255, 0), inset 0 0 10px rgba(125, 109, 109, 0), 5px 5px #66d5f2;
-}
-#skill-section .skill-container .skill-box:nth-child(12):hover {
-  box-shadow: 0 0 8px rgba(0, 0, 0, 0.05), 0 0px 12px rgba(0, 0, 0, 0.1), 0 8px 20px rgba(0, 0, 0, 0.1), inset 0 0 5px rgba(255, 255, 255, 0), inset 0 0 10px rgba(125, 109, 109, 0), 5px 5px #00eadf;
-}
-#skill-section .skill-container .skill-box:nth-child(13):hover {
-  box-shadow: 0 0 8px rgba(0, 0, 0, 0.05), 0 0px 12px rgba(0, 0, 0, 0.1), 0 8px 20px rgba(0, 0, 0, 0.1), inset 0 0 5px rgba(255, 255, 255, 0), inset 0 0 10px rgba(125, 109, 109, 0), 5px 5px #7B7B7B;
-}
-#skill-section .skill-container .skill-box:nth-child(14):hover {
-  box-shadow: 0 0 8px rgba(0, 0, 0, 0.05), 0 0px 12px rgba(0, 0, 0, 0.1), 0 8px 20px rgba(0, 0, 0, 0.1), inset 0 0 5px rgba(255, 255, 255, 0), inset 0 0 10px rgba(125, 109, 109, 0), 5px 5px #7D57B8;
 }
 @media (max-width: 1000px) {
   #skill-section .skill-container {

@@ -320,7 +320,7 @@ header {
 
 #project-section {
 	background-color: #dbdbdb; 
-	position: relative;
+	position: relative; 
 	
 	//glass effect
 	background: linear-gradient(
@@ -533,15 +533,15 @@ header {
 			transition: 0.6s linear;
 			margin-right: 20px;
 			margin-left: 20px;
-			// opacity: 0;
-			// transform: translateY(100px);
+			opacity: 0;
+			transform: translateY(100px);
 			background: rgba(255, 255, 255, 0.467); 
 
-			// &.animate {
-			// 	opacity: 1;
-			// 	transform: translateY(0);
-			// 	transition: opacity 1.5s, transform 1.5s;
-			// }
+			&.animate {
+				opacity: 1;
+				transform: translateY(0);
+				transition: opacity 1.5s, transform 1.5s;
+			}
 
 			@media (max-width: 470px) {
 				padding: 80px;
@@ -726,193 +726,193 @@ header {
 
 
 			//slide up a bit when hovered
-			&:hover {
-				transform: translate(-5px, -5px);
-				transition: transform 0.4s, box-shadow 0.4s; 
-			}
+			// &:hover {
+			// 	transform: translate(-5px, -5px);
+			// 	transition: transform 0.4s, box-shadow 0.4s; 
+			// }
 
-			&:nth-child(1) { 
+			// &:nth-child(1) { 
 
-				&:hover {
-					box-shadow: 0 0 8px rgba(0, 0, 0, 0.05),
-						0 0px 12px rgba(0, 0, 0, 0.1),
-						0 8px 20px rgba(0, 0, 0, 0.1),
-						inset 0 0 5px rgba(255, 255, 255, 0),
-						inset 0 0 10px rgba(255, 255, 255, 0), 5px 5px #f7a337; 
-				}
-			}
+			// 	&:hover {
+			// 		box-shadow: 0 0 8px rgba(0, 0, 0, 0.05),
+			// 			0 0px 12px rgba(0, 0, 0, 0.1),
+			// 			0 8px 20px rgba(0, 0, 0, 0.1),
+			// 			inset 0 0 5px rgba(255, 255, 255, 0),
+			// 			inset 0 0 10px rgba(255, 255, 255, 0), 5px 5px #f7a337; 
+			// 	}
+			// }
 
-			&:nth-child(2) { 
+			// &:nth-child(2) { 
 
-				&:hover {
-					box-shadow: 0 0 8px rgba(0, 0, 0, 0.05),
-						0 0px 12px rgba(0, 0, 0, 0.1),
-						0 8px 20px rgba(0, 0, 0, 0.1),
-						inset 0 0 5px rgba(255, 255, 255, 0),
-						inset 0 0 10px rgba(255, 255, 255, 0), 5px 5px #1b84c1;
+			// 	&:hover {
+			// 		box-shadow: 0 0 8px rgba(0, 0, 0, 0.05),
+			// 			0 0px 12px rgba(0, 0, 0, 0.1),
+			// 			0 8px 20px rgba(0, 0, 0, 0.1),
+			// 			inset 0 0 5px rgba(255, 255, 255, 0),
+			// 			inset 0 0 10px rgba(255, 255, 255, 0), 5px 5px #1b84c1;
 					
 					
-				}
-			}
+			// 	}
+			// }
 
-			&:nth-child(3) { 
+			// &:nth-child(3) { 
 
-				&:hover {
-					box-shadow: 0 0 8px rgba(0, 0, 0, 0.05),
-						0 0px 12px rgba(0, 0, 0, 0.1),
-						0 8px 20px rgba(0, 0, 0, 0.1),
-						inset 0 0 5px rgba(255, 255, 255, 0),
-						inset 0 0 10px rgba(125, 109, 109, 0),5px 5px #e8d44d;
+			// 	&:hover {
+			// 		box-shadow: 0 0 8px rgba(0, 0, 0, 0.05),
+			// 			0 0px 12px rgba(0, 0, 0, 0.1),
+			// 			0 8px 20px rgba(0, 0, 0, 0.1),
+			// 			inset 0 0 5px rgba(255, 255, 255, 0),
+			// 			inset 0 0 10px rgba(125, 109, 109, 0),5px 5px #e8d44d;
 					
 					
-				}
-			}
+			// 	}
+			// }
 
-			&:nth-child(4) { 
-				&:hover {
-					box-shadow: 0 0 8px rgba(0, 0, 0, 0.05),
-						0 0px 12px rgba(0, 0, 0, 0.1),
-						0 8px 20px rgba(0, 0, 0, 0.1),
-						inset 0 0 5px rgba(255, 255, 255, 0),
-						inset 0 0 10px rgba(125, 109, 109, 0), 5px 5px #c96195;
+			// &:nth-child(4) { 
+			// 	&:hover {
+			// 		box-shadow: 0 0 8px rgba(0, 0, 0, 0.05),
+			// 			0 0px 12px rgba(0, 0, 0, 0.1),
+			// 			0 8px 20px rgba(0, 0, 0, 0.1),
+			// 			inset 0 0 5px rgba(255, 255, 255, 0),
+			// 			inset 0 0 10px rgba(125, 109, 109, 0), 5px 5px #c96195;
 					
 					
-				}
-			}
+			// 	}
+			// }
 
-			&:nth-child(5) { 
+			// &:nth-child(5) { 
 
-				&:hover {
-					box-shadow: 0 0 8px rgba(0, 0, 0, 0.05),
-						0 0px 12px rgba(0, 0, 0, 0.1),
-						0 8px 20px rgba(0, 0, 0, 0.1),
-						inset 0 0 5px rgba(255, 255, 255, 0),
-						inset 0 0 10px rgba(125, 109, 109, 0), 5px 5px #790af0;
+			// 	&:hover {
+			// 		box-shadow: 0 0 8px rgba(0, 0, 0, 0.05),
+			// 			0 0px 12px rgba(0, 0, 0, 0.1),
+			// 			0 8px 20px rgba(0, 0, 0, 0.1),
+			// 			inset 0 0 5px rgba(255, 255, 255, 0),
+			// 			inset 0 0 10px rgba(125, 109, 109, 0), 5px 5px #790af0;
 					
 					
-				}
-			}
+			// 	}
+			// }
 
-			&:nth-child(6) { 
+			// &:nth-child(6) { 
 
-				&:hover {
-					box-shadow: 0 0 8px rgba(0, 0, 0, 0.05),
-						0 0px 12px rgba(0, 0, 0, 0.1),
-						0 8px 20px rgba(0, 0, 0, 0.1),
-						inset 0 0 5px rgba(255, 255, 255, 0),
-						inset 0 0 10px rgba(125, 109, 109, 0),  5px 5px #1163a4;
+			// 	&:hover {
+			// 		box-shadow: 0 0 8px rgba(0, 0, 0, 0.05),
+			// 			0 0px 12px rgba(0, 0, 0, 0.1),
+			// 			0 8px 20px rgba(0, 0, 0, 0.1),
+			// 			inset 0 0 5px rgba(255, 255, 255, 0),
+			// 			inset 0 0 10px rgba(125, 109, 109, 0),  5px 5px #1163a4;
 					
 					
-				}
-			}
+			// 	}
+			// }
 
 			&:nth-child(7) { 
 				img {
 					height: 25%;
 				}
 
-				&:hover {
-					box-shadow: 0 0 8px rgba(0, 0, 0, 0.05),
-						0 0px 12px rgba(0, 0, 0, 0.1),
-						0 8px 20px rgba(0, 0, 0, 0.1),
-						inset 0 0 5px rgba(255, 255, 255, 0),
-						inset 0 0 10px rgba(125, 109, 109, 0),  5px 5px #c63332;
+				// &:hover {
+				// 	box-shadow: 0 0 8px rgba(0, 0, 0, 0.05),
+				// 		0 0px 12px rgba(0, 0, 0, 0.1),
+				// 		0 8px 20px rgba(0, 0, 0, 0.1),
+				// 		inset 0 0 5px rgba(255, 255, 255, 0),
+				// 		inset 0 0 10px rgba(125, 109, 109, 0),  5px 5px #c63332;
 					
 					
-				}
+				// }
 			}
 
-			&:nth-child(8) { 
+			// &:nth-child(8) { 
 
-				&:hover {
-					box-shadow: 0 0 8px rgba(0, 0, 0, 0.05),
-						0 0px 12px rgba(0, 0, 0, 0.1),
-						0 8px 20px rgba(0, 0, 0, 0.1),
-						inset 0 0 5px rgba(255, 255, 255, 0),
-						inset 0 0 10px rgba(125, 109, 109, 0), 5px 5px #e84d31;
+			// 	&:hover {
+			// 		box-shadow: 0 0 8px rgba(0, 0, 0, 0.05),
+			// 			0 0px 12px rgba(0, 0, 0, 0.1),
+			// 			0 8px 20px rgba(0, 0, 0, 0.1),
+			// 			inset 0 0 5px rgba(255, 255, 255, 0),
+			// 			inset 0 0 10px rgba(125, 109, 109, 0), 5px 5px #e84d31;
 					
 					
-				}
-			}
+			// 	}
+			// }
 
-			&:nth-child(9) { 
-				img {
-					height: 60%;
-					margin-bottom: -15px;
-					margin-top: -10px;
-				}
-				&:hover {
-					box-shadow: 0 0 8px rgba(0, 0, 0, 0.05),
-						0 0px 12px rgba(0, 0, 0, 0.1),
-						0 8px 20px rgba(0, 0, 0, 0.1),
-						inset 0 0 5px rgba(255, 255, 255, 0),
-						inset 0 0 10px rgba(125, 109, 109, 0), 5px 5px #07a74d;
+			// &:nth-child(9) { 
+			// 	img {
+			// 		height: 60%;
+			// 		margin-bottom: -15px;
+			// 		margin-top: -10px;
+			// 	}
+			// 	&:hover {
+			// 		box-shadow: 0 0 8px rgba(0, 0, 0, 0.05),
+			// 			0 0px 12px rgba(0, 0, 0, 0.1),
+			// 			0 8px 20px rgba(0, 0, 0, 0.1),
+			// 			inset 0 0 5px rgba(255, 255, 255, 0),
+			// 			inset 0 0 10px rgba(125, 109, 109, 0), 5px 5px #07a74d;
 					
 					
-				}
-			}
+			// 	}
+			// }
 
-			&:nth-child(10) { 
+			// &:nth-child(10) { 
 
-				&:hover {
-					box-shadow: 0 0 8px rgba(0, 0, 0, 0.05),
-						0 0px 12px rgba(0, 0, 0, 0.1),
-						0 8px 20px rgba(0, 0, 0, 0.1),
-						inset 0 0 5px rgba(255, 255, 255, 0),
-						inset 0 0 10px rgba(125, 109, 109, 0),  5px 5px #4f9b42;
+			// 	&:hover {
+			// 		box-shadow: 0 0 8px rgba(0, 0, 0, 0.05),
+			// 			0 0px 12px rgba(0, 0, 0, 0.1),
+			// 			0 8px 20px rgba(0, 0, 0, 0.1),
+			// 			inset 0 0 5px rgba(255, 255, 255, 0),
+			// 			inset 0 0 10px rgba(125, 109, 109, 0),  5px 5px #4f9b42;
 					
 					
-				}
-			}
+			// 	}
+			// }
 
-			&:nth-child(11) { 
+			// &:nth-child(11) { 
 
-				&:hover {
-					box-shadow: 0 0 8px rgba(0, 0, 0, 0.05),
-						0 0px 12px rgba(0, 0, 0, 0.1),
-						0 8px 20px rgba(0, 0, 0, 0.1),
-						inset 0 0 5px rgba(255, 255, 255, 0),
-						inset 0 0 10px rgba(125, 109, 109, 0),  5px 5px #66d5f2;
+			// 	&:hover {
+			// 		box-shadow: 0 0 8px rgba(0, 0, 0, 0.05),
+			// 			0 0px 12px rgba(0, 0, 0, 0.1),
+			// 			0 8px 20px rgba(0, 0, 0, 0.1),
+			// 			inset 0 0 5px rgba(255, 255, 255, 0),
+			// 			inset 0 0 10px rgba(125, 109, 109, 0),  5px 5px #66d5f2;
 					
 					
-				}
-			}
-			&:nth-child(12) { 
+			// 	}
+			// }
+			// &:nth-child(12) { 
 
-				&:hover {
-					box-shadow: 0 0 8px rgba(0, 0, 0, 0.05),
-						0 0px 12px rgba(0, 0, 0, 0.1),
-						0 8px 20px rgba(0, 0, 0, 0.1),
-						inset 0 0 5px rgba(255, 255, 255, 0),
-						inset 0 0 10px rgba(125, 109, 109, 0), 5px 5px #00eadf;
+			// 	&:hover {
+			// 		box-shadow: 0 0 8px rgba(0, 0, 0, 0.05),
+			// 			0 0px 12px rgba(0, 0, 0, 0.1),
+			// 			0 8px 20px rgba(0, 0, 0, 0.1),
+			// 			inset 0 0 5px rgba(255, 255, 255, 0),
+			// 			inset 0 0 10px rgba(125, 109, 109, 0), 5px 5px #00eadf;
 					
 					
-				}
-			}
-			&:nth-child(13) { 
+			// 	}
+			// }
+			// &:nth-child(13) { 
 
-				&:hover {
-					box-shadow: 0 0 8px rgba(0, 0, 0, 0.05),
-						0 0px 12px rgba(0, 0, 0, 0.1),
-						0 8px 20px rgba(0, 0, 0, 0.1),
-						inset 0 0 5px rgba(255, 255, 255, 0),
-						inset 0 0 10px rgba(125, 109, 109, 0), 5px 5px #7B7B7B;
+			// 	&:hover {
+			// 		box-shadow: 0 0 8px rgba(0, 0, 0, 0.05),
+			// 			0 0px 12px rgba(0, 0, 0, 0.1),
+			// 			0 8px 20px rgba(0, 0, 0, 0.1),
+			// 			inset 0 0 5px rgba(255, 255, 255, 0),
+			// 			inset 0 0 10px rgba(125, 109, 109, 0), 5px 5px #7B7B7B;
 					
 					
-				}
-			}
-			&:nth-child(14) { 
+			// 	}
+			// }
+			// &:nth-child(14) { 
 
-				&:hover {
-					box-shadow: 0 0 8px rgba(0, 0, 0, 0.05),
-						0 0px 12px rgba(0, 0, 0, 0.1),
-						0 8px 20px rgba(0, 0, 0, 0.1),
-						inset 0 0 5px rgba(255, 255, 255, 0),
-						inset 0 0 10px rgba(125, 109, 109, 0),  5px 5px #7D57B8;
+			// 	&:hover {
+			// 		box-shadow: 0 0 8px rgba(0, 0, 0, 0.05),
+			// 			0 0px 12px rgba(0, 0, 0, 0.1),
+			// 			0 8px 20px rgba(0, 0, 0, 0.1),
+			// 			inset 0 0 5px rgba(255, 255, 255, 0),
+			// 			inset 0 0 10px rgba(125, 109, 109, 0),  5px 5px #7D57B8;
 					
 					
-				}
-			}
+			// 	}
+			// }
 		}
 
 		@media (max-width: 1000px) {

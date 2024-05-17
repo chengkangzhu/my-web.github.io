@@ -13,6 +13,8 @@ $(".hamburger, #navbar a").on("click", () => {
 });
 
 
+
+
 //scroll animation for water droplets in service section
 const serviceSection = document.getElementById("service-section");
 const drops = serviceSection.querySelectorAll(".drop");
@@ -25,17 +27,20 @@ function animateDrops() {
 	});
 }
 
-function handleScroll() {
+function handleServiceScroll() {
 	const serviceSectionPosition = serviceSection.getBoundingClientRect().top;
 	const windowHeight = window.innerHeight;
 
 	if (serviceSectionPosition < windowHeight / 2) {
 		animateDrops();
-		window.removeEventListener("scroll", handleScroll);
+		window.removeEventListener("scroll", handleServiceScroll);
 	}
 }
 
-window.addEventListener("scroll", handleScroll);
+window.addEventListener("scroll", handleServiceScroll);
+
+
+
 
 
 //slide in animation for project
@@ -46,22 +51,22 @@ window.addEventListener("scroll", () => {
 	// Get the project section's top and bottom positions
 	const sectionTop = projectSection.offsetTop;
 	const sectionBottom = sectionTop + projectSection.offsetHeight;
-
+ 
 	// Get the current scroll position of the window
-	const scrollPosition = window.pageYOffset + window.innerHeight;
-
+	const scrollPosition = window.scrollY + window.innerHeight;
+	console.log(window.innerHeight)
 	// Check if the scroll position is within the project section
 	if (scrollPosition >= sectionTop && scrollPosition < sectionBottom) {
 		// If the scroll position is within the project section, remove the project-image-animate and project-description-animate classes
 		const projectImage = document.querySelector(".project-image-animate");
-		const projectDescription = document.querySelector(
-			".project-description-animate"
-		);
+		const projectDescription = document.querySelector( ".project-description-animate" );
 
 		projectImage.classList.remove("project-image-animate");
 		projectDescription.classList.remove("project-description-animate");
 	}
 });
+
+//remove the event listener when
 
 
 //fade in animation for skillboxes
@@ -91,8 +96,7 @@ const observer = new IntersectionObserver((entries) => {
 observer.observe(skillBoxContainer);
 
 //change main display by hover subimages
-function changeDisplay (mainDisplay, newImg){
-	let displayElement = document.getElementById(mainDisplay)
-	displayElement.src = newImg.src
-	console.log(newImg.src)
+function changeDisplay (mainDisplayId, newImg){
+	let displayElement = document.getElementById(mainDisplayId)
+	displayElement.src = newImg.src 
 }
