@@ -1,6 +1,5 @@
 
-// toggle navbar menu 
-
+// navbar
 $(".hamburger, #navbar a").on("click", () => {
 	let currentVisibility = $("#navbar").css("visibility");
 	let newVisibility = currentVisibility === "hidden" ? "visible" : "hidden";
@@ -11,15 +10,36 @@ $(".hamburger, #navbar a").on("click", () => {
 		$("#navbar").removeClass("visibilty");
 	}
 });
+window.onbeforeunload = function () {
+    window.scrollTo(0, 0);
+};
+
+//project section (slide in)
+
+const handleProjectScroll = () => { 
+	const projectSection = document.querySelector("#project-section");	
+ 	const sectionPosition = projectSection.getBoundingClientRect().top; 
+	const windowCenter = window.innerHeight / 2
+    
+	if (sectionPosition < windowCenter) { 
+		const projectImage = document.querySelector(".project-image-animate");
+		const projectDescription = document.querySelector( ".project-description-animate" );
+
+		projectImage.classList.remove("project-image-animate");
+		projectDescription.classList.remove("project-description-animate");
+		window.removeEventListener("scroll", handleProjectScroll)
+	}
+}
+ 
+window.addEventListener("scroll", handleProjectScroll);
+ 
 
 
-
-
-//scroll animation for water droplets in service section
+//service section (waterdrop scroll in)
 const serviceSection = document.getElementById("service-section");
-const drops = serviceSection.querySelectorAll(".drop");
 
 function animateDrops() {
+	const drops = serviceSection.querySelectorAll(".drop");
 	drops.forEach((drop, index) => {
 		setTimeout(() => {
 			drop.classList.add("animate");
@@ -29,9 +49,9 @@ function animateDrops() {
 
 function handleServiceScroll() {
 	const serviceSectionPosition = serviceSection.getBoundingClientRect().top;
-	const windowHeight = window.innerHeight;
+	const windowCenter = window.innerHeight / 2
 
-	if (serviceSectionPosition < windowHeight / 2) {
+	if (serviceSectionPosition < windowCenter) {
 		animateDrops();
 		window.removeEventListener("scroll", handleServiceScroll);
 	}
@@ -43,60 +63,68 @@ window.addEventListener("scroll", handleServiceScroll);
 
 
 
-//slide in animation for project
-const projectSection = document.querySelector("#project-section");
-
-// Add a scroll event listener to the window object
-window.addEventListener("scroll", () => {
-	// Get the project section's top and bottom positions
-	const sectionTop = projectSection.offsetTop;
-	const sectionBottom = sectionTop + projectSection.offsetHeight;
- 
-	// Get the current scroll position of the window
-	const scrollPosition = window.scrollY + window.innerHeight;
-	console.log(window.innerHeight)
-	// Check if the scroll position is within the project section
-	if (scrollPosition >= sectionTop && scrollPosition < sectionBottom) {
-		// If the scroll position is within the project section, remove the project-image-animate and project-description-animate classes
-		const projectImage = document.querySelector(".project-image-animate");
-		const projectDescription = document.querySelector( ".project-description-animate" );
-
-		projectImage.classList.remove("project-image-animate");
-		projectDescription.classList.remove("project-description-animate");
-	}
-});
-
-//remove the event listener when
 
 
 //fade in animation for skillboxes
-const skillBoxContainer = document.querySelector(".skill-container");
+// const skillBoxContainer = document.querySelector(".skill-container");
 
-const options = {
-	root: null,
-	rootMargin: "0px",
-	threshold: 0.3,
-};
+// const options = {
+// 	root: null,
+// 	rootMargin: "0px",
+// 	threshold: 0.3,
+// };
 
-const observer = new IntersectionObserver((entries) => {
-	entries.forEach((entry) => {
-		let delay = 0;
+// const observer = new IntersectionObserver((entries) => {
+//     entries.forEach((entry) => {
+//         let delay = 0;
+// 		console.log(entry)
 
-		if (entry.isIntersecting) {
-			entry.target.querySelectorAll(".skill-box").forEach((skillBox) => {
-				setTimeout(() => {
-					skillBox.classList.add("animation-active");
-				}, delay);
-				delay += 150; // increase the delay for each element by 200ms
-			});
-		}
-	});
-}, options);
+//         if (entry.isIntersecting) {
+//             const skillBoxes = entry.target.querySelectorAll(".skill-box");
+//             skillBoxes.forEach((skillBox, index) => {
+//                 setTimeout(() => {
+//                     skillBox.classList.add("animation-active");
 
-observer.observe(skillBoxContainer);
+//                     // Check if this is the last skillBox to be animated
+//                     if (index === skillBoxes.length - 1) {
+//                         observer.unobserve(entry.target); // Stop observing the container
+//                     }
+//                 }, delay);
+//                 delay += 150; // Increase the delay for each element by 150ms
+//             });
+//         }
+//     });
+// }, options);
+
+// observer.observe(skillBoxContainer);
 
 //change main display by hover subimages
 function changeDisplay (mainDisplayId, newImg){
 	let displayElement = document.getElementById(mainDisplayId)
 	displayElement.src = newImg.src 
 }
+
+
+function handleSkillBoxScroll() {
+	const skillBoxContainer = document.querySelector(".skill-container")
+	const skillBoxContainerPosition = skillBoxContainer.getBoundingClientRect().top
+	const windowCenter = window.innerHeight / 2
+
+	if(skillBoxContainerPosition < windowCenter) {
+		let delay = 0
+		const skillBoxes = document.querySelectorAll(".skill-box");
+		skillBoxes.forEach((skillBox, index) => {
+			setTimeout(() => {
+				skillBox.classList.add("animation-active");
+
+				// Check if this is the last skillBox to be animated
+				if (index === skillBoxes.length - 1) {
+					window.removeEventListener("scroll",handleSkillBoxScroll) 
+				}
+			}, delay);
+			delay += 150; // Increase the delay for each element by 150ms
+		});
+	}
+}
+
+window.addEventListener('scroll',handleSkillBoxScroll)
